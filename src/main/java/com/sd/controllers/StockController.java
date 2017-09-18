@@ -91,7 +91,8 @@ public class StockController {
 		if (errors.getErrorCount() != 0) {
 			return "deleteStock.jsp";
 		}
-		stockDao.updateStock(stock);
+		stockDao.deleteStock(stock);
+		//stockDao.updateStock(stock);
 	
 		System.out.println(stock);
 		
