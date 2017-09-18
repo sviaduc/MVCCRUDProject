@@ -1,0 +1,11 @@
+id	stock_industry	stock_sector	stock_name	stock_symbol	market_cap
+1	Farming/Seeds/Milling	Consumer Services	Alliance One International, Inc.	AOI	$134.83M
+2	Major Banks	Finance	Sandy Spring Bancorp, Inc.	SASR	$970.14M
+3	Diversified Commercial Services	Consumer Services	Paychex, Inc.	PAYX	$21.95B
+4	n/a	n/a	Belden Inc	BDC^B	n/a
+5	Biotechnology: Biological Products (No Diagnostic Substances)	Health Care	Acceleron Pharma Inc.	XLRN	$1.15B
+6	Plastic Products	Consumer Non-Durables	Newell Brands Inc.	NWL	$26.5B
+7	Life Insurance	Finance	Genworth Financial Inc	GNW	$1.82B
+8	Major Pharmaceuticals	Health Care	Athersys, Inc.	ATHX	$158.07M
+9	Beverages (Production/Distribution)	Consumer Non-Durables	Molson Coors Brewing  Company	TAP	$14.14B
+10	Industrial Machinery/Components	Capital Goods	Dynasil Corporation of America	DYSL	$20.92M
