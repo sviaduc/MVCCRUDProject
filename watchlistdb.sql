@@ -30,12 +30,12 @@ CREATE TABLE IF NOT EXISTS `stock` (
 ENGINE = InnoDB;
 
 SET SQL_MODE = '';
-GRANT USAGE ON *.* TO watchlistdbuser@localhost;
- DROP USER watchlistdbuser@localhost;
+GRANT USAGE ON *.* TO watchlistdb@localhost;
+ DROP USER watchlistdb@localhost;
 SET SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
-CREATE USER 'watchlistdbuser'@'localhost' IDENTIFIED BY 'monte4523';
+CREATE USER 'watchlistdb'@'localhost' IDENTIFIED BY 'watchlistdb';
 
-GRANT SELECT, INSERT, TRIGGER, UPDATE, DELETE ON TABLE * TO 'watchlistdbuser'@'localhost';
+GRANT SELECT, INSERT, TRIGGER, UPDATE, DELETE ON TABLE * TO 'watchlistdb'@'localhost';
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

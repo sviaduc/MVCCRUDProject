@@ -10,7 +10,7 @@
 
   <context:component-scan base-package="com.sd.controllers, com.sd.data"/>
   
-  <!-- <bean id="dao" class="data.StateDAOImpl"/> 
-  -->
+  <bean id="dao" class="com.sd.data.StockDaoDBImpl"/> 
+ 
 <mvc:annotation-driven/>
 </beans>
