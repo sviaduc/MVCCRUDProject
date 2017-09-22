@@ -96,9 +96,10 @@ public class StockDAOImpl implements StockDAO {
   
   @Override
   public void updateStock(Stock stock) {
-	  Stock s =getStockbySymbol(stock.getSymbol());
-	  s.setName(stock.getName());
-	  
+	 // Stock s =getStockbySymbol(stock.getSymbol());
+	  stock.setName(stock.getName());  
+	  stock.setSymbol(stock.getSymbol());  
+	  stock.setIndustry(stock.getIndustry());  
   }
 
 @Override

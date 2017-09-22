@@ -15,7 +15,7 @@
     <%-- <p>${sessionScope.stock}</p> --%>
     
    <table>
-  <c:forEach items="${stock.industry}" var="industry">
+  <c:forEach var="industry" items="${industry}" >
     <tr>
       <td><c:out value="${stock.industry}" /></td>
     </tr>

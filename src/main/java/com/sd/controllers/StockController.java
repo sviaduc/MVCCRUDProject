@@ -17,7 +17,7 @@ import com.sd.data.StockDAO;
 
 
 @Controller
-//@SessionAttributes("state")
+//@SessionAttributes("stock")
 public class StockController {
 	@Autowired
 	private StockDAO stockDao;
@@ -54,9 +54,8 @@ public class StockController {
 	//To list industrys. HyperLinked to stock in industry
 	@RequestMapping(path = "GetIndustry.do", params = { "industry" }, method = RequestMethod.GET)
 	public List<String> getAllIndustry() {
-		System.out.println("*****************");
 		List<String> st = stockDao.getAllIndustry();
-		return st;
+		return "result.jsp";
 	}
 	
 	@RequestMapping(path = "NewStock.do", method = RequestMethod.GET)
@@ -87,10 +86,7 @@ public class StockController {
 	}
 	
 	@RequestMapping(path = "DeleteStock.do", method = RequestMethod.POST)
-	public String deleteStock(@Valid Stock stock, Errors errors) {
-		if (errors.getErrorCount() != 0) {
-			return "deleteStock.jsp";
-		}
+	public String deleteStock(Stock stock) {
 		stockDao.deleteStock(stock);
 		//stockDao.updateStock(stock);
 	
