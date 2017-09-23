@@ -52,11 +52,11 @@ public class StockController {
 		return mv;
 	}
 	//To list industrys. HyperLinked to stock in industry
-	@RequestMapping(path = "GetIndustry.do", params = { "industry" }, method = RequestMethod.GET)
-	public List<String> getAllIndustry() {
-		List<String> st = stockDao.getAllIndustry();
-		return "result.jsp";
-	}
+//	@RequestMapping(path = "GetIndustry.do", params = { "industry" }, method = RequestMethod.GET)
+//	public List<String> getAllIndustry() {
+//		List<String> st = stockDao.getAllIndustry();
+//		return "result.jsp";
+//	}
 	
 	@RequestMapping(path = "NewStock.do", method = RequestMethod.GET)
 	public ModelAndView addStock() {
@@ -86,11 +86,11 @@ public class StockController {
 	}
 	
 	@RequestMapping(path = "DeleteStock.do", method = RequestMethod.POST)
-	public String deleteStock(Stock stock) {
-		stockDao.deleteStock(stock);
+	public String deleteStock(String symbol) {
+		stockDao.deleteStock(symbol);
 		//stockDao.updateStock(stock);
 	
-		System.out.println(stock);
+		System.out.println(symbol);
 		
 		return "result.jsp";
 	}
@@ -119,6 +119,19 @@ public class StockController {
 		
 		return "result.jsp";
 	}
+	
+	@RequestMapping(path= "listStocks.do")
+	public ModelAndView listStocks(Stock stock) {
+		ModelAndView mv = new ModelAndView();
+		List<Stock> stocks = stockDao.getAllStocks();
+		mv.addObject("stocks",  stocks);
+		for (Stock stock2 : stocks) {
+			System.out.println(stock2);
+		}
+		mv.setViewName("WEB-INF/listStocks.jsp");
+		return mv;
+	}
+	
 	
 	
 

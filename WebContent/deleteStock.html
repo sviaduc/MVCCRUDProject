@@ -2,10 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="css/master.css" rel="stylesheet">
 <title>Stocks</title>
 </head>
 <body>
-	<h3>Stocks</h3>
+	<h1>Stocks</h1>
+	<div class="container">
 	<form action="DeleteStock.do" method="POST">
 		Symbol:
 		<input type="text" name="symbol" value="MSFT"/><br/>
@@ -15,5 +18,6 @@
 		<input type="text" name="industry" value="Technology"/><br/>
 		<input type="submit" value="Delete Stock" />
 	</form>
+	</div>
 </body>
 </html>

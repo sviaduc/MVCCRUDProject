@@ -7,25 +7,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<link href="css/master.css" rel="stylesheet">
+
 <title>Stocks</title>
 </head>
 <body>
-	<h1>Delete Stock</h1>
+	<h1>Watchlist</h1>
 	<div class="container">
-	<form:form action="DeleteStock.do" modelAttribute="stock">
-		<table>
-			
-			<tr>
-				<td>Symbol:</td>
-				<td><form:input path="symbol" /></td>
-				<td><form:errors path="symbol" /></td>
-			</tr>
-			
-			
-		</table>
-		<input type="submit" value="Delete Stock" />
+	<table>
+	<form:form action="listStocks.do" modelAttribute="stock">
+    <c:forEach var="stock" items="${stocks}">
+        <tr><td>Stock: ${stock.name}, ${stock.symbol}, ${stock.industry}</td></tr>
+    </c:forEach>
 	</form:form>
+ 
+  </table>
 	</div>
+	  
 </body>
 </html>

@@ -8,12 +8,14 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="css/master.css" rel="stylesheet">
 <title>Industry</title>
 </head>
 <body>
-  <h3>Industry</h3>
+  <h1>Industry</h1>
     <%-- <p>${sessionScope.stock}</p> --%>
-    
+    <div class="container">
    <table>
   <c:forEach var="industry" items="${industry}" >
     <tr>
@@ -21,6 +23,7 @@
     </tr>
   </c:forEach>
 </table>
+</div>
     
   <%-- <c:choose>
     <c:when test="${! empty stock}">

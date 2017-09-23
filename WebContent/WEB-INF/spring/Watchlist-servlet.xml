@@ -9,8 +9,7 @@
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
   <context:component-scan base-package="com.sd.controllers, com.sd.data"/>
-  
+  <mvc:annotation-driven></mvc:annotation-driven>
   <bean id="dao" class="com.sd.data.StockDaoDBImpl"/> 
  
-<mvc:annotation-driven/>
 </beans>

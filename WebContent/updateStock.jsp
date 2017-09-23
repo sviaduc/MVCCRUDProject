@@ -6,10 +6,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="css/master.css" rel="stylesheet">
 <title>Stocks</title>
 </head>
 <body>
-	<h3>Update Stock</h3>
+	<h1>Update Stock</h1>
+	<div class="container">
 	<form:form action="UpdateStock.do" modelAttribute="stock">
 		<table>
 			<tr>
@@ -31,5 +34,6 @@
 		</table>
 		<input type="submit" value="Update Stock" />
 	</form:form>
+	</div>
 </body>
 </html>

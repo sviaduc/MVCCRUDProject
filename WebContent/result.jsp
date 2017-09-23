@@ -7,11 +7,14 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="css/master.css" rel="stylesheet">
 <title>Watchlist</title>
 </head>
 <body>
-  <h3>Stock:</h3>
+  <h1>Stock:</h1>
     <%-- <p>${sessionScope.stock}</p> --%>
+    <div class="container">
   <c:choose>
     <c:when test="${! empty stock}">
       <ul>
@@ -33,7 +36,7 @@
       <p>No stock found</p>
     </c:otherwise>
   </c:choose>
-  
+  </div>
    
 </body>
 </html>
